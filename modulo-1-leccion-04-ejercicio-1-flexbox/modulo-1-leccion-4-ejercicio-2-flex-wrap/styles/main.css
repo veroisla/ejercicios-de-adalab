@@ -7,16 +7,15 @@
 }
 
 .container {
-  display: flexbox;
+  display: flex;
   box-sizing: border-box;
   border: 2px solid blue;
-  background-color: rgb(207, 245, 245);
+  background-color: rgb(171, 233, 233);
+  flex-wrap: wrap;
 }
 
 .item {
-  box-sizing: border-box;
-  border: 1px solid burlywood;
+  border: 1px solid rgb(226, 143, 34);
   height: 100px;
   width: 200px;
-  flex-wrap: ;
 }
