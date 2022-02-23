@@ -1,0 +1,16 @@
+.container {
+  box-sizing: border-box;
+  background-color: pink;
+  border: 1px solid black;
+  font-size: 14px;
+  text-align: center;
+  height: 500px;
+  width: 500px;
+  display: flex;
+}
+
+.item {
+  box-sizing: border-box;
+  border: 2px solid rgb(4, 0, 255);
+  background-color: aquamarine;
+}

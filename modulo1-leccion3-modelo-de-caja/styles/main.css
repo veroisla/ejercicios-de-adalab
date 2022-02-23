@@ -1,0 +1,74 @@
+.h2 {
+  border-radius: 1px;
+  border-style: solid;
+  border-color: brown;
+  display: inline;
+}
+
+.h3 {
+  border-radius: 1px;
+  border-style: solid;
+  border-color: brown;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 80px;
+  height: 100px;
+}
+
+.hidden {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+.mark {
+  background-color: blue;
+  color: blanchedalmond;
+}
+
+.div {
+  border: 2px;
+  border-color: brown;
+  border-style: solid;
+  width: 100px;
+  height: 100px;
+}
+
+.first {
+  display: block;
+}
+
+.second {
+  display: inline;
+}
+
+.third {
+  display: inline-block;
+}
+
+.fourth {
+  display: none;
+}
+
+.imagen {
+  width: 100px;
+  height: 100px;
+}
+
+.imagen2 {
+  width: 200px;
+  height: 200px;
+  border-style: double;
+  border-color: black;
+}
+
+:root {
+  --brand-color: orange;
+}
+
+header {
+  color: var(--brand-color);
+}
