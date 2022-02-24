@@ -1,3 +1,11 @@
+#container {
+  background-color: pink;
+  position: absolute;
+  top: 100px;
+  width: 1000px;
+  height: 1000px;
+}
+
 #capa1 {
   position: absolute;
   top: 100px; /*esta a 100px de el punto 0.*/
@@ -18,8 +26,8 @@
 
 #capa3 {
   position: absolute;
-  top: 300px;
-  left: 50px;
+  top: 0px; /*esta capa esta en el punto 0.0 del contenedor, si yo el contenedor lo muevo, esa capa va a continuar en el punto 0.0 del contenedor*/
+  left: 0px;
   width: 50px;
   height: 50px;
   background-color: green;
