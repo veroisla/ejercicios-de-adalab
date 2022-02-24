@@ -1,0 +1,19 @@
+#capa1 {
+  position: fixed; /*al darle la propiedad position:fixed, este item no se va a mover, aunque bajemos ahcia abajo de la pantalla, seria como la cabecera que siempre se ve pro ejemplo*/
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  padding: 40px;
+}
+
+#capa2 {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+
+#capa3 {
+  width: 500px;
+  height: 500px;
+  background-color: green;
+}
