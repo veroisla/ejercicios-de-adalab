@@ -1,3 +1,26 @@
 .body {
-  background-color: rgb(236, 197, 236);
+  background-color: rgb(243, 230, 243);
+}
+
+.container {
+  display: flex;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  height: 100px;
+  align-items: center;
+  flex-direction: row; /*elemento colocado en la misma dirección del texto*/
+  justify-content: space-between;
+}
+
+.items {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.item-home {
+  padding-left: 20px;
+}
+
+.item-contacto {
+  padding-right: 20px;
 }
