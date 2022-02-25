@@ -1,0 +1,9 @@
+.header {
+  background-color: violet;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
