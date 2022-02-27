@@ -1,0 +1,22 @@
+.body {
+  background-color: lightblue;
+}
+
+.container_header {
+  background-color: lightslategray;
+}
+
+.container_main {
+  background-color: yellow;
+}
+
+.container_footer {
+  background-color: lightpink;
+}
+
+.enlaces_background {
+  background-color: lightgreen;
+}
+
+@media (max-width: 480px) {
+}
