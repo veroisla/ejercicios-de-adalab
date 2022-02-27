@@ -1,0 +1,17 @@
+@media all and (max-width: 480px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media all and (min-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+}
