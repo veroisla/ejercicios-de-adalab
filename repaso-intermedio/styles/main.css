@@ -1,0 +1,81 @@
+/*
+letters: 
+font-family: 'Montserrat', sans-serif; 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: white;
+}
+.letra {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800px;
+  color: #cc212a;
+  font-size: 40px;
+}
+
+.copyrigth {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400px;
+  text-align: center; /*colocar texto en el centro*/
+  /*margin-bottom: 50px;*/
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.container_main {
+  height: 100vh; /*esto es para que el contenedor, en este caso lo que es #cc21 fire engine... ocupe el 100% del alto de la pantalla, 100vh. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  position: sticky; /*para que se quede anclado, en el bottom y el z-index para cambiarlo de capa*/
+  bottom: 0;
+  background-color: lightblue;
+  border-top: #cc212a solid;
+  justify-content: center;
+}
+
+/*.circulo_rojo {
+  width: 50px;
+  height: 50px;
+  background-color: var(--colorFire);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  transform: translateY(-50%);
+}*/
+
+.header {
+  background-color: rgb(0, 255, 149);
+  position: sticky;
+  top: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista,
+.enlace {
+  margin-top: 15px;
+  list-style: none;
+}
+
+.circulo_rojo {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateY(-50%);
+}
