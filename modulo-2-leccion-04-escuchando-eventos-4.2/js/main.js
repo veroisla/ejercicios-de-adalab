@@ -1,3 +1,6 @@
+"use strict";
+
+
 //----- 4.2 ESCUCHANDO EVENTOS ------- //
 
 
@@ -60,7 +63,6 @@ buttonChange.addEventListener("click", () => {
 
 
 
-
 // 4. DAME IPSUM
 
 const ipsum = document.querySelector(".js-ipsum");
@@ -78,4 +80,17 @@ ipsum.addEventListener("mouseover", () => {
 
     // 5. SCROLL ES DE COLORES
 
-   //PENDIENTE DE HACER
+
+ const scrollColor = document.querySelector(".js-scroll");
+
+ window.addEventListener("scroll", () => {
+    if (window.scrollY > 250) {
+        scrollColor.classList.add("purple");
+    }
+    else if (window.scrollY < 250){
+        scrollColor.classList.add("pink");
+
+    }
+});
+
+   //HACE ALGO RARO, SE QUEDA ROSA, Y SI RECARGO LA PÁGINA SE PONE MORADO
