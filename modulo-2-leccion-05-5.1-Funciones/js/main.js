@@ -40,21 +40,24 @@ console.log(result2);
 
 //EJERCICIO 3. TICKET CON IVA
 
-function iva (a) {
-    /*return ("El precio sin IVA", a, "IVA:", a * 21 / 100 , "Total", a * (1 + 21 / 100));*/
-    return ( a,  a * 21 / 100, a * (1 + 21 / 100));
-};
+function shop(a) {
+    
+    const iva = a * 21 / 100;
+    const total = a * (1 + 21 / 100);
+    return (`Precio sin IVA: ${a}, IVA: ${iva} Total: ${total}`);
+}
 
-const price = iva (10);
-console.log("Precio sin IVA:", price, "IVA", price, "Total:", price );
-
-/*No sé como hacer para que me devuelva todos los valores correctamente, sin crear varias funciones¿?, así me marca todo el rato la del total */
-
+console.log(shop(10));
 
 
 // EJERCICIO 5. QUERYSELECTOR PARA TODAS
 
 function getEl (a) {
+
+    // También podría declarar una constante: 
+    // const element = document.querySelector(a)
+    // return a; Por si esa cosntante la quiero utilizar más de una vez, también queda más claro. 
+
     return (document.querySelector(a))
 };
 
@@ -66,3 +69,4 @@ console.log(subtitleEl);
 
 
 /*No sé si esto es exactamente lo que piden, en la consola si se pinta el elemento seleccionado*/
+
