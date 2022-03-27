@@ -18,8 +18,10 @@ function workWithMovies () {
  //Modificar película, en posición 1
  movies[1]= "Viajando a granada";
 
+ return movies; 
 };
 
-console.log(workWithMovies.movies);
+console.log(workWithMovies());
+ 
 
-//* Se muestra en la consola pero TODO, cuando no estaba dentro de la función solo se mostraban las películas. 
+// * Para que la función nos devuelva su valor tenemos que poner return, y en este caso nos interesa lo que está dentro de la constante movies. Si no pusiesemos return nos devolvería undefined.
