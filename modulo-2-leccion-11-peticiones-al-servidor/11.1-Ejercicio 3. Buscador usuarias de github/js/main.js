@@ -13,17 +13,22 @@
 // 2. Evento listener
 // 3. Funcion (fetch)
 
-const inputUser = document.querySelector('.js_inputUser');
+const userGithub = document.querySelector('.js_userGithub'); //Input usuario de github, necesito el valor que escriba la usuaria
 const buttonSearch = document.querySelector('.js_buttonSearch');
-const paint = document.querySelector('.js_paint');
 
-function handleClickUser() {
-  fetch(`https://docs.github.com/en/rest/reference/users`)
+function handleUserGithub() {
+  fetch(`https://api.github.com/users/${userGithub.value}`) //pongo la constnate del input, y como necesito su valor el .value
     .then((response) => response.json())
     .then((data) => {
-      paint.src = data.message;
-      paint.innerHTML = name;
+      const userName = document.querySelector('.js_name');
+      userName.innerHTML = data.name;
+      const userPhoto = document.querySelector('.js_image');
+      userPhoto.src = data.avatar_url;
+      const userRepos = document.querySelector('.js_repos');
+      userRepos.innerHTML = data.public_repos;
+      const userFollowers = document.querySelector('.js_followers');
+      userFollowers.innerHTML = data.followers;
     });
 }
 
-buttonSearch.addEventListener('click', handleClickUser);
+buttonSearch.addEventListener('click', handleUserGithub);
