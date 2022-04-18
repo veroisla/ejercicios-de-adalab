@@ -1,5 +1,5 @@
 import '../styles/App.scss';
-
+import logo from '../images/logo.png';
 function App() {
   return (
     <body>
@@ -10,11 +10,7 @@ function App() {
           _alt="Logo Adalab"
           title="Ir a página Adalab"
         >
-          <img
-            className="icon"
-            src="./images/adalab-logo-155x61.png"
-            alt="icono_adalab"
-          />
+          <img className="icon" src={logo} alt="icono_adalab" title="Adalab" />
         </a>
         <nav>
           <ul className="list">
