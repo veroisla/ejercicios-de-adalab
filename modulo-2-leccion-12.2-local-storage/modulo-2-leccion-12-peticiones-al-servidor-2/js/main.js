@@ -41,3 +41,21 @@ function handleClickSearch() {
 }
 
 button.addEventListener('click', handleClickSearch);
+
+// OTRA MANERA DE HACERLO:
+
+// let listChar = [];
+
+// function handleClickSearch() {
+//   fetch(`https://swapi.py4e.com/api/people/?search=${search.value}`)
+//     .then((response) => response.json())
+
+//      .then((data) => {
+//    listChar = data.results.map((char) => {
+//      const newCha = {
+//      hair_color:char.hair_color,
+//      name: char.name,
+//   };
+//     return newCha;
+//     });
+//     } faltaría pintarlo en una lista
