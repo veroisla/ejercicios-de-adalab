@@ -1,36 +1,80 @@
-// Fichero src/components/App.js
 import { useState } from 'react';
+import '../styles/App.scss';
 
 const App = () => {
-  // Creamos la constante de estado giftWrap con el valor inicial a booleano
-  // Al iniciar suponemos que la clienta no quiere envolver el producto para regalo, por eso ponemos false
-  const [giftWrap, setGiftWrap] = useState(false);
+  const [tortilla, setTortilla] = useState('');
 
-  // Creamos la función manejadora
-  const handleGiftWrap = (ev) => {
-    // En la que guardamos, no el valor del input, sino su propiedad checked, en giftWrap con setGiftWrap
-    setGiftWrap(ev.target.checked);
+  const handleTortilla = (ev) => {
+    let huevosCheck = ev.target.form.elements.huevos.checked;
+    let cebollaCheck = ev.target.form.elements.cebolla.checked;
+    let patatasCheck = ev.target.form.elements.patatas.checked;
+    if (huevosCheck && cebollaCheck && patatasCheck) {
+      setTortilla('ole la tortilla!');
+    } else {
+      setTortilla('fuera de aquí robot!');
+    }
+  };
+
+  //FUNCIÓN PREVENIR ENVÍO FORMULARIO
+
+  const handleOnsubmit = (ev) => {
+    ev.preventDefault();
   };
 
   return (
-    <div>
-      <form>
-        <label htmlFor="giftWrap">
-          ¿Quieres envolver para regalo tu compra?
-        </label>
-
-        {/* Creamos un evento de tipo change en este input que va a ser manejado por handleGiftWrap */}
+    <>
+      <h3>Selecciona los ingredientes de la tortilla de patatas</h3>
+      <form onSubmit={handleOnsubmit} className="form">
+        <label htmlFor="macarrones">Macarrones</label>
         <input
           type="checkbox"
-          name="gitWrap"
-          id="gitWrap"
-          onChange={handleGiftWrap}
+          id="macarrones"
+          name="tortilla"
+          onChange={handleTortilla}
         />
 
-        {/* Usamos la constante giftWrap para pintarla en el HTML */}
-        <p>{giftWrap === true ? 'Sí' : 'No'} te lo envolveremos para regalo</p>
+        <label htmlFor="patatas">Patatas</label>
+        <input
+          type="checkbox"
+          id="patatas"
+          name="tortilla"
+          onChange={handleTortilla}
+        />
+
+        <label htmlFor="nueces">Nueces</label>
+        <input
+          type="checkbox"
+          id="nueces"
+          name="tortilla"
+          onChange={handleTortilla}
+        />
+
+        <label htmlFor="huevos">Huevos</label>
+        <input
+          type="checkbox"
+          id="huevos"
+          name="tortilla"
+          onChange={handleTortilla}
+        />
+
+        <label htmlFor="cebolla">Cebolla</label>
+        <input
+          type="checkbox"
+          id="cebolla"
+          name="tortilla"
+          onChange={handleTortilla}
+        />
+
+        <label htmlFor="cerveza">Cerveza</label>
+        <input
+          type="checkbox"
+          id="cerveza"
+          name="tortilla"
+          onChange={handleTortilla}
+        />
+        <p>{tortilla}</p>
       </form>
-    </div>
+    </>
   );
 };
 

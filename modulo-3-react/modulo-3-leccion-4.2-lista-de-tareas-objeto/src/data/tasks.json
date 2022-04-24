@@ -1,0 +1,10 @@
+[
+    { "taskElement": 'Comprar harina, jamón y pan rallado', "completed": true },
+    { "taskElement": 'Hacer croquetas ricas', "completed": true },
+    { "taskElement": 'Ir a la puerta de un gimnasio', "completed": false },
+    {
+      "taskElement":
+        'Comerme las croquetas mirando a la gente que entra en el gimnasio',
+      "completed": false
+    }
+  ]
