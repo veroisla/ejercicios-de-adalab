@@ -1,0 +1,18 @@
+ /*TABLET VERION*/
+  
+  @media all and (min-width: 768px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .h1 {
+      font-size: 40px;
+    }
+    .icon {
+      margin: 20px 0px 20px 30px;
+    }
+    .list {
+      margin: 0px 30px 0px 0px;
+    }
+  }
+  

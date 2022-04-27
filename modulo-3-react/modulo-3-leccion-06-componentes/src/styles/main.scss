@@ -1,0 +1,23 @@
+
+  /*MAIN*/
+  
+  .main {
+    height: 100vh;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .h1 {
+    font-size: 30px;
+    color: var(--color-diversidad);
+    /*width: 150px;*/
+    width: 11ch; /*En vez de poner width: 150px, puedo poner width=11ch, cada ch ocupa más o menos el espacio de una letra*/
+    text-align: center;
+    font-family: var(--font-family);
+    text-transform: capitalize;
+  }
+  
+  

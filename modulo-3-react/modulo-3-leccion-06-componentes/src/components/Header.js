@@ -1,4 +1,8 @@
 import LogoImage from './Logo';
+import Links from './Links';
+import '../styles/Header.scss';
+import '../styles/core/core.scss';
+import '../styles/version/tabletVersion.scss';
 
 const Header = () => {
   return (
@@ -6,25 +10,19 @@ const Header = () => {
       <LogoImage />
       <nav>
         <ul className="list">
-          <li>
-            <a
-              className="link"
-              href="https://www.linkedin.com/feed/"
-              target="_blank"
-            >
-              blog
-            </a>
-          </li>
-
-          <li>
-            <a
-              className="link"
-              href="mailto:veroislagleaniz@gmail.com"
-              target="_blank"
-            >
-              contacto
-            </a>
-          </li>
+          <Links
+            href="https://www.linkedin.com/feed/"
+            text="Blog"
+            openInNewTab={true}
+            className="link"
+          />
+          <Links
+            href="mailto:veroislagleaniz@gmail.com"
+            text="Contacto"
+            //Aquí temgo que llamar a la propiedad OpenInNewTab ya que es la que tiene la condición.
+            openInNewTab={false}
+            className="link"
+          />
         </ul>
       </nav>
     </>
@@ -32,3 +30,4 @@ const Header = () => {
 };
 
 export default Header;
+//Puedo utilizar el componente Links cuantas veces quiera. Volviendo a ponerlo <Links /> cada vez que quier autilziarlo y pasándole las como valor a las propiedades lo que me interese

@@ -1,0 +1,34 @@
+/*HEADER*/
+.header {
+    background-color: var(--color-diversidad);
+    width: 100%;
+    position: fixed; /*mantiene el espacio del main, cuidado al poner sticky que puede hacer roll la página*/
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .icon {
+    width: 155px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    list-style: none;
+  }
+  a.link {
+    color: var(--color-texto-menu);
+    font-family: var(--font-family);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
