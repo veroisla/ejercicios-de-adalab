@@ -1,4 +1,7 @@
 const InputName = (props) => {
+  const handleInputChange = (ev) => {
+    props.handleChange(ev.target.value);
+  };
   return (
     <div className="input-group-text">
       <label className="label-text" htmlFor="name">
@@ -11,7 +14,8 @@ const InputName = (props) => {
         id={props.inputId}
         placeholder={props.inputPlaceholder}
         value={props.inputValue.value}
-        onChange={props.handleChange}
+        onChange={handleInputChange}
+        // onChange={props.handleChange}
         //le paso como propiedad handleChange (lo podría llamar pepino) y en APP digo handleChange={handleName}, es decir a la función handleName
       />
     </div>
