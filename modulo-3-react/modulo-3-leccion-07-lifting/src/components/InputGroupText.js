@@ -1,4 +1,4 @@
-const InputName = (props) => {
+const InputGroupText = (props) => {
   const handleInputChange = (ev) => {
     props.handleChange(ev.target.value);
   };
@@ -13,13 +13,15 @@ const InputName = (props) => {
         name={props.inputName}
         id={props.inputId}
         placeholder={props.inputPlaceholder}
-        value={props.inputValue.value}
+        value={props.inputValue}
         onChange={handleInputChange}
-        // onChange={props.handleChange}
-        //le paso como propiedad handleChange (lo podría llamar pepino) y en APP digo handleChange={handleName}, es decir a la función handleName
+        //Le paso como propiedad handleInputChange que tiene la funcion handleChange que gaurda el valor del input?
       />
     </div>
   );
 };
 
-export default InputName;
+export default InputGroupText;
+
+// Añade también la función setEmail para poder hacer lifting.
+// Refactoriza la función setEmail porque ahora esta recibe el valor del input y no el evento.
