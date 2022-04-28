@@ -1,6 +1,7 @@
 // Fichero src/components/App.js
 import { useState } from 'react';
 import Preview from './Preview';
+import InputName from './InputGroupText';
 
 const App = () => {
   // Estados del componente
@@ -67,20 +68,15 @@ const App = () => {
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
           {/* name */}
-          <div className="input-group-text">
-            <label className="label-text" htmlFor="name">
-              Escribe un nombre:
-            </label>
-            <input
-              className="input-text"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="María García"
-              value={name}
-              onChange={handleName}
-            />
-          </div>
+          <InputName
+            labelText={'Escribe tu nombre'}
+            inputName={'name'}
+            inputId={'name'}
+            inputPlaceholder={'Verónica isla'}
+            inputValue={''}
+            handleChange={handleName}
+            //handleChange (propiedad), le digo tienees e valor de handleName(función), de esta manera le estoy pasando esta funcióna traves de props al componente hija
+          />
 
           {/* email */}
           <div className="input-group-text">
