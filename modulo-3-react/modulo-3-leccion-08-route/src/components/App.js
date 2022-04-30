@@ -1,5 +1,7 @@
 import '../styles/App.scss';
+// 1. IMPORTAMOS ROUTES, ROUTE Y LINK
 import { Routes, Route, Link } from 'react-router-dom';
+import { useLocation, matchPath } from 'react-router';
 
 import { useEffect, useState } from 'react';
 import getMovies from '../services/fetchMovies';
@@ -7,6 +9,7 @@ import localStorage from '../services/localStorage';
 import Header from './Header';
 import MovieList from './MovieList';
 import MovieForm from './MovieForm';
+import MovieDetails from './MovieDetails';
 
 function App() {
   // Variable estado que guardará un array de objetos con datos de películas
@@ -50,8 +53,20 @@ function App() {
     });
   };
 
+  //BUSCAR PELI QUE QUIERO MOSTRAR CUANDO LE DOY CLICK A MÁS INFO
+
+  const { pathname } = useLocation(); //Obtengo al ruta de la aplicación
+
+  const dataPath = matchPath('/movie/:id', pathname); //--SI COINCIDE LA RUTA CON /MOVIE/:ID, ME LO VA A GUARDAR EN DATAPATH
+
+  const movieId = dataPath !== null ? dataPath.params.id : null; //--BUSCO EL ID DE LA PELÍCULA, CONSTANTE PARA GUARDAR EL ID, si datapath es diferente de null, voy a coger el id
+
+  const movieFound = movies.find((item) => item.id === movieId); //-- bUSCO TODA LA INFO DE LA PELÍCULA Y SE LO PASO A MOVIEDETAIL
+
   return (
     <div className="App">
+      {/* 3. CREAMOS NAVEGADOR, EN LOS <LI>METEMOS ETIQUETA <LINK /></LI>
+      DENTRO DE ESA ETIQUETA LE PASAMOS EL ATRIBUTO TO="/", QUE NOS VA A MARCAR LA RUTA A SEGUIR. ES LA MISMA QUE HE PUESTO EN PATH.  */}
       <nav>
         <ul>
           <li>
@@ -65,6 +80,10 @@ function App() {
           </li>
         </ul>
       </nav>
+      {/*2.  CREAMOS LAS RUTAS DENTRO DE LAS ETIQUETAS <ROUTES></ROUTES>  
+      <ROUTE></ROUTE>LA RUTA HAY QUE PASARLE DOS PROPIEDADES 
+      PATH="", RUTA QUE TIENE QUE SEGUIR 
+      ELEMENT={} QUE ME VA A MOSTRAR, DENTRO DEL ATRIBUTO ELEMENT PUEDO METER UN COMPONENTE ENTERO.  */}
       <Routes>
         <Route
           path="/"
@@ -85,6 +104,11 @@ function App() {
               changeData={changeData}
             />
           }
+        />
+        {/* RUTA DINÁMICA, EN PATH DIGO SIGUE LA RUTA MOVIE, YA QUE QUIERO MOSTRAR UN DETALLE DE LA PELÍCULA, Y : SIGNIFICA QUE ES UN PARÁMETRO, QUE CAMBIA.  */}
+        <Route
+          path="/movie/:id"
+          element={<MovieDetails movie={movieFound} />}
         />
       </Routes>
     </div>
