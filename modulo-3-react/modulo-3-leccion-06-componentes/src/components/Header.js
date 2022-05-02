@@ -13,14 +13,13 @@ const Header = () => {
           <Links
             href="https://www.linkedin.com/feed/"
             text="Blog"
-            openInNewTab={true}
             className="link"
           />
           <Links
             href="mailto:veroislagleaniz@gmail.com"
             text="Contacto"
             //Aquí temgo que llamar a la propiedad OpenInNewTab ya que es la que tiene la condición.
-            openInNewTab={false}
+            openInNewTab={true}
             className="link"
           />
         </ul>

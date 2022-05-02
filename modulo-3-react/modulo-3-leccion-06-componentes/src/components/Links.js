@@ -13,6 +13,10 @@ function Links(props) {
   );
 }
 
+Links.defaultProps = {
+  openInNewTab: 'false',
+};
+
 export default Links;
 
 //En el componente link, hago como la base y las diferentes propiedades que le voy a poder pasar.
